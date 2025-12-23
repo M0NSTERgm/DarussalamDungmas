@@ -51,13 +51,23 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        header, nav, button {
+            touch-action: manipulation;
+        }
+
+        #mobile-menu a {
+            padding: 12px 0;
+            display: block;
+        }
+
     </style>
 </head>
 
 <body class="antialiased text-slate-800 min-h-screen flex flex-col">
 
 <!-- ================= HEADER ================= -->
-<header class="sticky top-0 z-50 glass-morphism border-b border-emerald-100">
+<header class="sticky top-0 z-[9999] glass-morphism border-b border-emerald-100 relative">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
 
         <div class="flex items-center group cursor-pointer">
@@ -81,12 +91,16 @@
             </a>
         </div>
 
-        <button id="menu-btn" class="md:hidden text-primary">
-            <i class="fas fa-bars text-2xl"></i>
+        <button 
+            id="menu-btn" 
+            class="md:hidden text-primary relative z-[10000] p-3"
+            aria-label="Menu">           
+            <i class="fas fa-bars text-2xl pointer-events-none"></i>
         </button>
+
     </nav>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-emerald-100 p-4 space-y-4 shadow-xl">
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-emerald-100 p-4 space-y-4 shadow-xl z-[9999]">
         <a href="#beranda" class="block font-bold text-primary">Beranda</a>
         <a href="tentang.html" class="block font-bold text-primary">Tentang Kami</a>
         <a href="#jenjang" class="block font-bold text-primary">Jenjang</a>
@@ -146,7 +160,7 @@
                 </div>
                 <h3 class="font-bold text-xl text-primary mb-3">TK Nurrul Ummah</h3>
                 <p class="text-slate-500 text-sm mb-6 leading-relaxed">Menyiapkan kemandirian dan kreativitas anak dalam lingkungan islami.</p>
-                <a href="#" class="text-primary-light font-bold text-sm hover:text-accent">Detail Program <i class="fas fa-arrow-right ml-1"></i></a>
+                <a href="tk.html" class="text-primary-light font-bold text-sm hover:text-accent">Detail Program <i class="fas fa-arrow-right ml-1"></i></a>
             </div>
 
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-emerald-50 hover:shadow-2xl hover:border-accent group transition-all duration-500 reveal" style="transition-delay: 200ms;">
@@ -155,7 +169,7 @@
                 </div>
                 <h3 class="font-bold text-xl text-primary mb-3">SD islam</h3>
                 <p class="text-slate-500 text-sm mb-6 leading-relaxed">Fondasi literasi, numerasi, dan dasar-dasar ilmu agama yang kuat.</p>
-                <a href="#" class="text-primary-light font-bold text-sm hover:text-accent">Detail Program <i class="fas fa-arrow-right ml-1"></i></a>
+                <a href="sd.html" class="text-primary-light font-bold text-sm hover:text-accent">Detail Program <i class="fas fa-arrow-right ml-1"></i></a>
             </div>
 
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-emerald-50 hover:shadow-2xl hover:border-accent group transition-all duration-500 reveal" style="transition-delay: 300ms;">
@@ -510,6 +524,22 @@ document.addEventListener("DOMContentLoaded", () => {
         if (section) observer.observe(section);
     });
 
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+
+    // Tutup menu setelah klik link (Android UX fix)
+    mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+        });
+    });
 });
 </script>
 
