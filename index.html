@@ -6,7 +6,7 @@
     <title>Darussalam Dungmas | Islamic Boarding School</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
 
     <script>
         tailwind.config = {
@@ -61,6 +61,47 @@
             display: block;
         }
 
+        .logo-marquee {
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-right 35s linear infinite;
+}
+
+.logo-track img {
+    height: 56px;
+    margin: 0 20px;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    opacity: 0.9;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.logo-track img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+@media (hover: hover) {
+    .logo-track img:hover {
+        opacity: 1;
+        transform: scale(1.05);
+    }    
+}
+@keyframes marquee-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
     </style>
 </head>
 
@@ -84,7 +125,7 @@
             <a href="tentang.html" class="hover:text-accent transition">Tentang Kami</a>
             <a href="#jenjang" class="nav-link hover:text-accent transition">Jenjang</a>
             <a href="#kegiatan" class="nav-link hover:text-accent transition">Kegiatan</a>
-            <a href="https://wa.me/6281232259113">
+            <a href="https://wa.me/6282334804979" target="_blank" rel="noopener noreferrer">
                 <button class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-light hover:shadow-lg transition-all active:scale-95">
                     Kontak kami
                 </button>
@@ -129,7 +170,7 @@
                 <a href="#jenjang" class="bg-accent text-primary font-bold px-10 py-4 rounded-full shadow-2xl hover:bg-yellow-400 transition transform hover:-translate-y-1">
                     Lihat Program
                 </a>
-                <a href="https://wa.me/62812345678" class="bg-white/10 backdrop-blur-md text-white border border-white/30 font-bold px-10 py-4 rounded-full hover:bg-white/20 transition">
+                <a href="https://bit.ly/PPDB_YPIPPD_2024" class="bg-white/10 backdrop-blur-md text-white border border-white/30 font-bold px-10 py-4 rounded-full hover:bg-white/20 transition">
                     Pendaftaran
                 </a>
             </div>
@@ -415,6 +456,57 @@
         </div>
 </section>
 
+<!-- ===== SUPPORT COMMUNITY ===== -->
+<div class="mt-24 reveal">
+    <div class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-emerald-100 p-10">
+        
+        <div class="text-center mb-10">
+            <span class="text-primary font-extrabold tracking-widest uppercase text-sm">
+                Didukung Oleh
+            </span>
+            <h3 class="text-3xl md:text-4xl font-black text-primary mt-4">
+                Lembaga & Komunitas
+            </h3>
+            <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
+                Kolaborasi dan dukungan dari berbagai lembaga keagamaan,
+                sosial, dan komunitas masyarakat.
+            </p>
+        </div>
+
+        <div class="logo-marquee">
+            <div class="logo-track">
+                
+                <!-- SET 1 -->
+                <img src="LOGO_NU.png" alt="NU">
+                <img src="LOGO_ANSOR.png" alt="Ansor">
+                <img src="LOGO_BANSER.png" alt="Banser">
+                <img src="LOGO_IPNU.png" alt="IPNU">
+                <img src="LOGO_IPPNU.png" alt="IPPNU">
+                <img src="OSDA_PA.png" alt="Osda Putra">
+                <img src="OSDA_PI.png" alt="Osda Putri">
+                <img src="HISAMUDA.png" alt="Hisamuda">
+                <img src="JRA.png" alt="JRA">
+                <img src="LOGO_NS.png" alt="Nurussabab">
+
+                <!-- DUPLIKASI  -->
+                <img src="LOGO_NU.png" alt="NU">
+                <img src="LOGO_ANSOR.png" alt="Ansor">
+                <img src="LOGO_BANSER.png" alt="Banser">
+                <img src="LOGO_IPNU.png" alt="IPNU">
+                <img src="LOGO_IPPNU.png" alt="IPPNU">
+                <img src="OSDA_PA.png" alt="Osda Putra">
+                <img src="OSDA_PI.png" alt="Osda Putri">
+                <img src="HISAMUDA.png" alt="Hisamuda">
+                <img src="JRA.png" alt="JRA">
+                <img src="LOGO_NS.png" alt="Nurussabab">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
 </main>
 
 <!-- ================= FOOTER ================= -->
@@ -435,14 +527,14 @@
                     <li><a href="#beranda" class="hover:text-accent transition">Beranda</a></li>
                     <li><a href="#jenjang" class="hover:text-accent transition">Jenjang Pendidikan</a></li>
                     <li><a href="#kegiatan" class="hover:text-accent transition">Aktivitas Santri</a></li>
-                    <li><a href="https://wa.me/62812345678" class="hover:text-accent transition">Pendaftaran</a></li>
+                    <li><a href="https://bit.ly/PPDB_YPIPPD_2024" class="hover:text-accent transition">Pendaftaran</a></li>
                 </ul>
             </div>
             <div>
                 <h5 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Kontak</h5>
                 <ul class="space-y-4 text-sm">
                     <li class="flex items-center"><i class="fas fa-map-marker-alt mr-3 text-accent"></i> Jl. K.H. Sholeh No.114, Bojonegoro</li>
-                    <li class="flex items-center"><i class="fas fa-phone mr-3 text-accent"></i> (021) 1234 5678</li>
+                    <li class="flex items-center"><i class="fas fa-phone mr-3 text-accent"></i> +62 82334804979</li>
                     <li class="flex items-center"><i class="fas fa-envelope mr-3 text-accent"></i> info@darussalam.sch.id</li>
                 </ul>
             </div>
@@ -545,3 +637,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
