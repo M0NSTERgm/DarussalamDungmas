@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MA Salafiyah Darussalam | Unggul & Agamis</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Tailwind config must be declared BEFORE the CDN script so custom colors/classes are applied -->
     <script>
         tailwind.config = {
             theme: {
@@ -15,6 +16,7 @@
             }
         }
     </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-background text-slate-800 antialiased">
 
@@ -34,16 +36,16 @@
                     <i class="fas fa-university mr-3 text-accent"></i> Fokus Pendidikan MA Salafiyah
                 </h2>
                 <p class="leading-relaxed text-slate-600 mb-6">
-                    MA Salafiyah Darussalam dirancang untuk mempersiapkan santri menjadi kader ulama sekaligus intelektual. Kami berfokus pada keseimbangan kurikulum nasional dengan pendalaman **Kitab Turats (Kitab Kuning)** seperti Fathul Qorib dan Imriti, serta persiapan intensif menuju Perguruan Tinggi Negeri (PTN).
+                    MA Salafiyah Darussalam dirancang untuk mempersiapkan santri menjadi kader ulama sekaligus intelektual. Kami berfokus pada keseimbangan kurikulum nasional dengan pendalaman Kitab Kuning dan penguatan bahasa Arab.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="bg-emerald-50 p-5 rounded-2xl border border-emerald-100">
                         <span class="block text-primary font-black text-lg">Program Unggulan</span>
-                        <p class="text-sm text-slate-500">Tahfidz Al-Qur'an, pendalaman ilmu alat (Nahwu-Shorof), dan intensif PTN.</p>
+                        <p class="text-sm text-slate-500">Tahfidz Al-Qur'an, pendalaman ilmu alat (Nahwu-Shorof), dan intensif persiapan PTN.</p>
                     </div>
                     <div class="bg-emerald-50 p-5 rounded-2xl border border-emerald-100">
                         <span class="block text-primary font-black text-lg">Peminatan</span>
-                        <p class="text-sm text-slate-500">Tersedia jurusan Soshum (Ips) dan Keagamaan untuk mencetak lulusan kompeten.</p>
+                        <p class="text-sm text-slate-500">Tersedia jurusan Soshum (IPS) dan Keagamaan untuk mencetak lulusan kompeten.</p>
                     </div>
                 </div>
             </section>
@@ -55,7 +57,7 @@
                         <div class="text-accent text-2xl"><i class="fas fa-microscope"></i></div>
                         <div>
                             <h4 class="font-bold text-primary">Laboratorium Modern</h4>
-                            <p class="text-sm text-slate-500">Fasilitas komputer dan Sains untuk menunjang keterampilan IT dan mengembangkan keterampilan ilmiah siswa.</p>
+                            <p class="text-sm text-slate-500">Fasilitas komputer dan sains untuk menunjang keterampilan IT dan pengembangan kemampuan ilmiah siswa.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
@@ -70,72 +72,69 @@
         </div>
 
         <section class="bg-white p-8 rounded-[2rem] shadow-sm border border-emerald-50">
-                <h2 class="text-2xl md:text-3xl font-black text-primary mb-8 flex items-center">
-                    <i class="fas fa-star mr-3 text-accent"></i> Ekstrakurikuler
-                </h2>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="flex items-center p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition border border-transparent hover:border-emerald-100">
-                        <div class="w-12 h-12 bg-white shadow-sm rounded-xl flex items-center justify-center text-primary mr-4">
-                            <i class="fas fa-music"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-primary">Seni Musik</h4>
-                            <p class="text-xs text-slate-500">Pengembangan bakat olah vokal, Paduan suara, Banjari, dan Drumband.</p>
-                        </div>
+            <h2 class="text-2xl md:text-3xl font-black text-primary mb-8 flex items-center">
+                <i class="fas fa-star mr-3 text-accent"></i> Ekstrakurikuler
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex items-center p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition border border-transparent hover:border-emerald-100">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-xl flex items-center justify-center text-primary mr-4">
+                        <i class="fas fa-music"></i>
                     </div>
-
-                    <div class="flex items-center p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition border border-transparent hover:border-emerald-100">
-                        <div class="w-12 h-12 bg-white shadow-sm rounded-xl flex items-center justify-center text-primary mr-4">
-                            <i class="fas fa-camera"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-primary">Multimedia</h4>
-                            <p class="text-xs text-slate-500">Pelatihan desain grafis, fotografi, dan videografi.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition border border-transparent hover:border-emerald-100">
-                        <div class="w-12 h-12 bg-white shadow-sm rounded-xl flex items-center justify-center text-primary mr-4">
-                            <i class="fas fa-running"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-primary">Olahraga</h4>
-                            <p class="text-xs text-slate-500">Tim Futsal dan Voli untuk melatih fisik, kekompakan, dan prestasi..</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition border border-transparent hover:border-emerald-100">
-                        <div class="w-12 h-12 bg-white shadow-sm rounded-xl flex items-center justify-center text-primary mr-4">
-                            <i class="fas fa-microphone-alt"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-primary">Muhadloroh</h4>
-                            <p class="text-xs text-slate-500">Program unggulan untuk melatih mental dan kemampuan berorasi (public speaking) santri.</p>
-                        </div>
+                    <div>
+                        <h4 class="font-bold text-primary">Seni Musik</h4>
+                        <p class="text-xs text-slate-500">Pengembangan bakat vokal, paduan suara, banjari, dan drumband.</p>
                     </div>
                 </div>
-            </section>
 
-        <section class="max-w-7xl mx-auto px-6 mb-12">
-    <div class="bg-primary rounded-[2.5rem] p-6 md:p-8 text-white shadow-2xl overflow-hidden">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-            
-            <div class="flex-1 text-center md:text-left">
-                <h3 class="text-xl md:text-2xl font-black mb-2">Ayo Daftar di MA Salafiyah Darussalam!</h3>
-                <p class="text-emerald-100 text-sm md:text-base">Jadilah bagian dari generasi unggul dan agamis bersama kami.</p>
-            </div>
-                <a href="https://wa.me/6282332627508" 
-                   class="flex items-center justify-center gap-3 w-full sm:w-auto bg-accent text-primary px-8 py-4 rounded-2xl font-black hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg group">
-                    <i class="fab fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
-                    <span>HUBUNGI WHATSAPP</span>
-                </a>
-            </div>
+                <div class="flex items-center p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition border border-transparent hover:border-emerald-100">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-xl flex items-center justify-center text-primary mr-4">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-primary">Multimedia</h4>
+                        <p class="text-xs text-slate-500">Pelatihan desain grafis, fotografi, dan videografi.</p>
+                    </div>
+                </div>
 
-        </div>
-    </div>
-</section>
+                <div class="flex items-center p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition border border-transparent hover:border-emerald-100">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-xl flex items-center justify-center text-primary mr-4">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-primary">Olahraga</h4>
+                        <p class="text-xs text-slate-500">Tim futsal dan voli untuk melatih fisik, kekompakan, dan prestasi.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition border border-transparent hover:border-emerald-100">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-xl flex items-center justify-center text-primary mr-4">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-primary">Muhadloroh</h4>
+                        <p class="text-xs text-slate-500">Program unggulan untuk melatih mental dan kemampuan berorasi (public speaking) santri.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="col-span-3 mt-6">
+            <div class="bg-primary rounded-[2.5rem] p-6 md:p-8 text-white shadow-2xl overflow-hidden">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-xl md:text-2xl font-black mb-2">Ayo Daftar di MA Salafiyah Darussalam!</h3>
+                        <p class="text-emerald-100 text-sm md:text-base">Jadilah bagian dari generasi unggul dan agamis bersama kami.</p>
+                    </div>
+                    <a href="https://wa.me/6282332627508"
+                       class="group flex items-center justify-center gap-3 w-full sm:w-auto bg-accent text-primary px-8 py-4 rounded-2xl font-black hover:bg-yellow-400 transition-all transform hover:scale-105">
+                        <i class="fab fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
+                        <span>HUBUNGI WHATSAPP</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
 </body>
 </html>
+
