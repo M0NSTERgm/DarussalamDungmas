@@ -6,88 +6,88 @@
 <title>SDI Darussalam</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+ crossorigin="anonymous">
 
 <script>
-    tailwind.config = {
-    theme:{extend:{colors:{ 
-    primary:'#065f46',accent:'#fbbf24',soft:'#ecfdf5'
-    }}}}
+tailwind.config = {
+  theme:{extend:{colors:{
+    primary:'#065f46',
+    accent:'#fbbf24',
+    soft:'#ecfdf5'
+  }}}
+}
 </script>
 
 <style>
-    body{font-family:'Plus Jakarta Sans',sans-serif}
-    .card:hover{transform:translateY(-6px)}
+ body{font-family:'Plus Jakarta Sans',sans-serif}
+  .card{transition:all .35s ease}
+  .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.1)}
 </style>
 </head>
 
-    <body class="bg-soft text-slate-800">
+<body class="bg-soft text-slate-800">
 
-<!-- HEADER -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-emerald-100 p-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-primary font-bold flex items-center hover:text-emerald-700 transition">
-                <i class="fas fa-arrow-left mr-2"></i> Beranda
-            </a>
-            <span class="font-black text-primary uppercase text-sm md:text-base">SDI <span class="text-accent">Darussalam</span></span>
+ <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-emerald-100 p-4">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <a href="index.html" class="text-primary font-bold hover:text-emerald-700 transition">
+    <i class="fa-solid fa-house mr-2"></i>Beranda
+    </a>
+    <span class="font-black text-primary uppercase">SDI <span class="text-accent">Darussalam</span>
+    </span>
+  </div>
+ </nav>
+
+ <section class="relative py-32 bg-gradient-to-r from-primary to-emerald-900 text-white text-center overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,.15),transparent)]"></div>
+        <h1 class="relative text-5xl font-black mb-6 animate-pulse">SDI Darussalam</h1>
+        <p class="relative max-w-xl mx-auto text-emerald-100 text-xl">Membangun generasi cerdas, disiplin, dan berakhlak mulia</p>
+ </section>
+
+ <section class="py-24 max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-black text-primary mb-12 text-center">Program Unggulan</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="card bg-white p-8 rounded-3xl">
+            <i class="fa-solid fa-quran text-3xl text-primary mb-4"></i>
+            <h3 class="font-bold text-xl mb-2">Qiroatul Qur'an</h3>
+            <p class="text-slate-600">Pembiasaan membaca Al-Qur'an sejak dini</p>
         </div>
-    </nav>
-
-<!-- HERO -->
-    <section class="relative py-32 bg-gradient-to-r from-primary to-emerald-900 text-white text-center">
-        <h1 class="text-5xl font-black mb-6">SDI Darussalam</h1>
-        <p class="max-w-xl mx-auto text-emerald-100 text-xl">
-            Membangun generasi cerdas, disiplin, dan berakhlak mulia
-        </p>
-    </section>
-
-<!-- PROGRAM -->
-    <section class="py-24 max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-black text-primary mb-12 text-center">Program Unggulan</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="card bg-white p-8 rounded-3xl shadow transition">
-                <i class="fas fa-quran text-3xl text-primary mb-4"></i>
-                <h3 class="font-bold text-xl mb-2">Qiroatul Qur'an</h3>
-                <p class="text-slate-600">Pembiasaan membaca al-quran sejak dini</p>
-            </div>
-        <div class="card bg-white p-8 rounded-3xl shadow transition">
-            <i class="fas fa-book text-3xl text-primary mb-4"></i>
+        <div class="card bg-white p-8 rounded-3xl">
+            <i class="fa-solid fa-book text-3xl text-primary mb-4"></i>
             <h3 class="font-bold text-xl mb-2">Akademik Kuat</h3>
             <p class="text-slate-600">Literasi dan numerasi unggul</p>
         </div>
-            <div class="card bg-white p-8 rounded-3xl shadow transition">
-                <i class="fas fa-users text-3xl text-primary mb-4"></i>
-                <h3 class="font-bold text-xl mb-2">Karakter Islami</h3>
-                <p class="text-slate-600">Membentuk karakteristik siswa yang taat beragama</p>
-            </div>
-        </div>
-    </section>
 
-
-<!-- CTA -->
-    <section class="max-w-7xl mx-auto px-6 mb-12">
-    <div class="bg-primary rounded-[2.5rem] p-6 md:p-8 text-white shadow-2xl overflow-hidden">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-            
-            <div class="flex-1 text-center md:text-left">
-                <h3 class="text-xl md:text-2xl font-black mb-2">Ayo Daftar!</h3>
-                <p class="text-emerald-100 text-sm md:text-base">Jadilah bagian dari generasi unggul dan agamis bersama kami.</p>
-            </div>
-                <a href="https://wa.me/6281359611846" 
-                   class="flex items-center justify-center gap-3 w-full sm:w-auto bg-accent text-primary px-8 py-4 rounded-2xl font-black hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg group">
-                    <i class="fab fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
-                    <span>HUBUNGI WHATSAPP</span>
-                </a>
-            </div>
-
+        <div class="card bg-white p-8 rounded-3xl">
+            <i class="fa-solid fa-users text-3xl text-primary mb-4"></i>
+            <h3 class="font-bold text-xl mb-2">Karakter Islami</h3>
+            <p class="text-slate-600">Akhlakul karimah & disiplin</p>
         </div>
     </div>
-</section>
+ </section>
 
-    <footer class="bg-slate-950 text-slate-400 text-center py-6">
-        © 2026 SDI Darussalam
-    </footer>
+ <section class="max-w-7xl mx-auto px-6 mb-12">
+    <div class="bg-primary rounded-[2.5rem] p-8 text-white shadow-2xl transition hover:scale-[1.01]">
+     <div class="flex flex-col md:flex-row items-center justify-between gap-6"><div>
+        <h3 class="text-2xl font-black mb-2">Ayo Daftar!</h3>
+        <p class="text-emerald-100">Hubungi kami sekarang</p>
+    </div>
+
+    <a href="https://wa.me/6281359611846"class="group flex items-center gap-3 bg-accent text-primary px-8 py-4 rounded-2xl font-blacktransition-all duration-300 hover:bg-yellow-400 hover:scale-105">
+     <i class="fa-brands fa-whatsapp text-2xl group-hover:rotate-12 transition"></i>
+     <span>HUBUNGI WHATSAPP</span>
+    </a>
+    </div>
+  </div>
+ </section>
+
+ <footer class="bg-slate-950 text-slate-400 text-center py-6">
+ © 2026 SDI Darussalam
+ </footer>
 
 </body>
 </html>
+
+
 
