@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pondok Pesantren | Darussalam Dungmas</title>
-    <link rel="icon" href="/favicon.png" sizes="96x96" type="Logo-Darmas.png">
-
-    <meta name="description" content="Website resmi Darussalam Dungmas. Kegiatan, Aktifitas Santri.">
-    <meta name="keywords" content="Darussalam Dungmas, Pondok Pesantren, Pendidikan Islam">
+    <title>Darussalam Dungmas | Islamic Boarding School</title>
+    <link rel="icon" type="image/png" href="Logo-Darmas.png">
+    <meta name="description" content="Website resmi Darussalam Dungmas. Informasi kegiatan, profil, dan berita terbaru Darussalam Dungmas.">
+    <meta name="keywords" content="darussalamdungmas, darussalam dungmas">
+    <link rel="canonical" href="https://darussalamdungmas.my.id/">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="Darussalam Dungmas">
 
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="cannonical" href="https://darussalamdungmas.my.id/">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+
+    <meta http-equiv="Content-Security-Policy"
+        content="
+            default-src 'self';
+            script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com;
+            style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+            font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+            img-src 'self' data:;
+            connect-src 'self';
+            frame-ancestors 'none';">
+
+
+
+
 
     <script>
         tailwind.config = {
@@ -31,6 +42,7 @@
                 }
             }
         }
+
     </script>
 
     <script type="application/ld+json">
@@ -47,7 +59,7 @@
   }
 }
 </script>
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
 
@@ -126,6 +138,7 @@
         transform: translateX(0);
     }
 }
+
 @media (max-width: 640px) {
   .logo-track {
     animation-duration: 60s;
@@ -135,15 +148,22 @@
     margin: 0 14px;
   }
 }
+#mobile-menu {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
 
     </style>
 </head>
 
-<body class="antialiased text-slate-800 min-h-screen flex flex-col">
+<body class="antialiased text-slate-800 min-h-screen flex flex-col overflow-x-hidden">
 
 <!-- ================= HEADER ================= -->
-<header class="sticky top-0 z-[9999] glass-morphism border-b border-emerald-100 relative">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+<header class="sticky top-0 z-[9000] bg-white border-b ">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+    
 
         <div class="flex items-center group cursor-pointer">
             <div class="rounded-lg mr-3 group-hover:rotate-12 transition-transform">
@@ -167,16 +187,26 @@
         </div>
 
         <button 
-            id="menu-btn" 
-            class="md:hidden text-primary relative z-[10000] p-3"
-            aria-label="Menu">           
-            <i class="fas fa-bars text-2xl pointer-events-none"></i>
-        </button>
+            id="menu-btn"
+      class="md:hidden flex items-center justify-center p-2 text-primary"
+      aria-label="Menu">
+      <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+
+    </button>
+
 
     </nav>
 
-    <div id="mobile-menu" 
- class="hidden fixed inset-0 bg-white z-[9999] p-6 pt-24 space-y-6">
+    <div id="mobile-menu"
+  class="hidden fixed top-[96px] left-0 right-0
+         h-[50vh] max-w-full
+         z-[9500]
+         bg-white/80 backdrop-blur-md
+         flex flex-col items-center
+         pt-8 space-y-5
+         text-base font-semibold text-primary
+         rounded-b-2xl shadow-lg
+         overflow-hidden">
     
     <a href="#beranda" class="block text-xl font-bold text-primary">Beranda</a>
     <a href="tentang.html" class="block text-xl font-bold text-primary">Tentang Kami</a>
@@ -444,7 +474,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-emerald-50 hover:shadow-2xl transition-all group reveal">
-                <div class="relative h-64 overflow-hidden">
+                <div class="relative h-48 sm:h-64 overflow-hidden">
                     <img src="kegiatan-harian.jpg" alt="Kegiatan Harian" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                         <span class="bg-accent text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Harian</span>
@@ -464,7 +494,7 @@
             </div>
 
             <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-emerald-50 hover:shadow-2xl transition-all group reveal" style="transition-delay: 150ms;">
-                <div class="relative h-64 overflow-hidden">
+                <div class="relative h-48 sm:h-64 overflow-hidden">
                     <img src="Apel_mingguan.jpg" alt="Kegiatan Mingguan" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                         <span class="bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Mingguan</span>
@@ -483,7 +513,7 @@
             </div>
 
             <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-emerald-50 hover:shadow-2xl transition-all group reveal" style="transition-delay: 300ms;">
-                <div class="relative h-64 overflow-hidden">
+                <div class="relative h-48 sm:h-64 overflow-hidden">
                     <img src="Senam.jpeg" alt="Kegiatan Bulanan" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                         <span class="bg-emerald-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Bulanan</span>
@@ -669,32 +699,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
+const menuBtn = document.getElementById('menu-btn');
+const menu = document.getElementById('mobile-menu');
+const icon = document.getElementById('menu-icon');
+const links = document.querySelectorAll('.mobile-link');
 
-    menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-    });
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-times');
+});
 
-    // Tutup menu setelah klik link (Android UX fix)
-    mobileMenu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            mobileMenu.classList.add("hidden");
-        });
-    });
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.add('hidden');
+    icon.classList.add('fa-bars');
+    icon.classList.remove('fa-times');
+  });
 });
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
